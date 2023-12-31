@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer utilities {
+  .containers {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+/* global.css or your global styles file */
+/* Add custom styles for Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-navigation-size: 30px; /* Set your desired size */
+  border: 16px solid transparent; /* Set border size and color */
+  border-radius: 50%; /* Make it fully rounded */
+  background-clip: padding-box; /* Ensure the background doesn't extend beyond the border */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: var(--swiper-navigation-size);
+}
